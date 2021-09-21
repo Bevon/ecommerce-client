@@ -1,12 +1,12 @@
-// import Menu from "./Menu";
+import '../styles.css'
 
 export default function Layout({title='Title', description='Description', className, children}){
 
     return (
-        <div>
-            <div  className="p-5 text-center bg-light">
-                <h2 className="mb-3">{title}</h2>
-                <p className='text-primary'>{description}</p>
+        <div className='jumbotron'>
+            <div  className="p-5">
+                <h2 className="mb-3 text-white">{title}</h2>
+                <p className='text-white'>{description}</p>
             </div>
            <div className={className}>{children}</div>
         </div>

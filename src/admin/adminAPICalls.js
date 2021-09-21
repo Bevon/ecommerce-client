@@ -32,6 +32,8 @@ export async function createProduct(userId, token, product){
 
         return  response.json()
     
+    }).catch((error) => {
+        console.log(error)
     })
 }
 

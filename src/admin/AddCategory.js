@@ -75,7 +75,7 @@ export default function AddCategory(){
 
     return (
 
-        <Layout title='Create a new Category' description={`Howdy, ${user.name}, use the form to create a new product category`} className='container mt-5'>
+        <Layout title='Create a new Category' description={`Howdy, ${user.name}, create a new product category`} className='container mt-5'>
             <div className='row'>
                 <div className='col-md-8 offset-md-2'>
                     {showSuccess()}

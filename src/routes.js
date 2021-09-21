@@ -10,7 +10,9 @@ import AdminDashboard from './user/AdminDashboard';
 import { AdminRoute } from './auth/adminRoutes';
 import AddCategory from './admin/AddCategory';
 import CreateProduct from './admin/CreateProduct';
-
+import Shop from './core/Shop';
+import ViewProduct from './core/Product';
+import Cart from './core/Cart';
 
 dotenv.config();
 
@@ -21,7 +23,11 @@ function Routes(){
         <BrowserRouter>
         <Menu/>
         <Switch>
+
             <Route path={'/'} exact component={Home}/>
+            <Route path={'/product/:productId'} exact component={ViewProduct}/>
+            <Route path={'/shop'} exact component={Shop}/>
+            <Route path={'/cart'} exact component={Cart}/>
             <PrivateRoute path={'/user/dashboard'} exact component={UserDashboard}/>
             <AdminRoute path={'/admin/dashboard'} exact component={AdminDashboard}/>
             <Route path={'/signin'} exact component={Signin}/>
